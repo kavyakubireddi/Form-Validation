@@ -67,13 +67,13 @@
 
             const nameRegex = /^[A-Z][a-z]{3,14}$/;
             if (!nameRegex.test(fName)) {
-                document.getElementById("firstName-error").textContent = "First Name should contain 4-15 characters, first letter uppercase, rest lowercase.";
+                document.getElementById("firstName-error").textContent = "First Name must be and contain 4-15 characters";
                 isValid = false;
             }
 
             const userRegex = /^[a-zA-Z0-9]{5,12}$/;
             if (!userRegex.test(user)) {
-                document.getElementById("userName-error").textContent = "Username should contain 5-12 characters.";
+                document.getElementById("userName-error").textContent = "Username must be and contain 5-12 characters.";
                 isValid = false;
             }
 
@@ -85,19 +85,19 @@
 
             const passRegex = /^[a-zA-Z0-9@_-]{8,20}$/;
             if (!passRegex.test(pass)) {
-                document.getElementById("password-error").textContent = "Password must contain 8-20 characters.";
+                document.getElementById("password-error").textContent = "Password must alphamuneric(@,_and- are also allowed) and be 8-20 characters.";
                 isValid = false;
             }
 
             const telRegex = /^[6789][0-9]{9}$/;
             if (!telRegex.test(phone)) {
-                document.getElementById("telephone-error").textContent = "Telephone must have 10 digits and should start with 6, 7, 8, or 9.";
+                document.getElementById("telephone-error").textContent = "Telephone must be a valid Indian telephone number(10 digits)";
                 isValid = false;
             }
 
             const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
             if (!panRegex.test(pan)) {
-                document.getElementById("panCard-error").textContent = "PAN card should be a valid PAN ID (e.g., ABCDE1234A).";
+                document.getElementById("panCard-error").textContent = "Must be a valid PanCard number";
                 isValid = false;
             }
 
